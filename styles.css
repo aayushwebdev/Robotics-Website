@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Livvic', sans-serif;
+}
+
+:root {
+    --header-text: 'Bungee', cursive;
+    --second-header-text: 'Odibee Sans', cursive;
+    --text: 'Livvic', sans-serif;
+    --bg-dark: #000000;
+    --bg-light: #f8f8f8;
+    --main-color: #ff5757;
+    --secondary-bg-color: #1c1f22;
+    --highligh-color: #fac300;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--bg-light);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .5s;
+}
+
+.header.sticky {
+    background: var(--bg-dark);
+    box-shadow: 0 .1rem 1rem var(--second-header-text);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--bg-light);
+    font-weight: 200;
+    margin-right: 3.5rem;
+    text-transform: uppercase;
+}
+
+.header.sticky .navbar a{
+    color: var(--bg-light);
+}
+
+.header.sticky .navbar a.active {
+    color: var(--highligh-color);
+}
+
+.navbar a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px ;
+    width: 100%;
+    height: .2rem;
+    background: var(--bg-light);
+}
+
+.header.sticky .navbar a::before {
+    background: var(--highligh-color);
+    opacity: .7;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--bg-light);
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.home .home-content {
+    text-align: center;
+}
+
+.main-heading {
+    font-family: var(--second-header-text);
+    font-size: 10rem;
+    letter-spacing: .1cm;
+    color: var(--main-color);
+}
+
+.heading {
+    font-family: var(--second-header-text);
+    font-size: 6rem;
+    letter-spacing: .1cm;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.sub-heading {
+    font-family: var(--text);
+    color: var(--bg-light);
+    font-size: 3.2rem;
+    padding-bottom: 3rem;
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-size: cover;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.story-img img {
+    width: 30vw;
+}
+
+.story .story-content {
+    text-align: left;
+}
+
+.story-content h3 {
+    text-align: left;
+}
+
+.story-content p {
+    text-align: left;
+    font-size: 1.6rem;
+    /* margin: 2rem 0 3rem; */
+}
+
+.competition {
+    align-items: center;
+    background-size: cover;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    padding: 10rem 9% 10rem;
+}
+
+.competition-card {
+    align-items: center;
+    background: var(--secondary-bg-color);
+    border-radius: 3rem;
+    padding: 5rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.competition-layer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 0;
+}
+
+.competition-layer .competition-img img{
+    width: 45rem;
+    border-radius: 2rem;
+}
+
+.competition-layer .competition-content h5{
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.competition-layer .competition-content p{
+    font-size: 1.6rem;
+}
+
+.competition-layer .c1{
+    text-align: left;
+    padding-right: 3rem;
+}
+
+.competition-layer .c2{
+    text-align: right;
+    padding-left: 3rem;
+}
